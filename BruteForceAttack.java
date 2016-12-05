@@ -1,5 +1,7 @@
 package createBruteForceAttackFile;
 
+
+// おちんぽ
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
@@ -13,9 +15,9 @@ public class BruteForceAttack {
 	
     public static String[] passChar = {
     	
-		"1","2","3","4","5","6","7","8","9","0",
-		"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","w","z",
-		"A","B","C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S","T", "U", "V", "W", "X", "W", "Z",
+		"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", 
+		"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "w", "z", 
+		"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "W", "Z", 
 		null
 	};
 
@@ -50,7 +52,7 @@ public class BruteForceAttack {
 			
 			attackPass = "";
 			
-			attackPass = Conversion (indexList,attackPass);
+			attackPass = Conversion (indexList, attackPass);
 			
 			for (int i = 0; i < stringList.size(); i++) {
 				attackPass += stringList.get(i);
@@ -64,11 +66,11 @@ public class BruteForceAttack {
 			
 			 FileWrite(attackPass);
 			 
-			indexList = CountUp (indexList,length);
+			indexList = CountUp (indexList, length);
 			
 		}
 		
-		Finish (startTime,count,attackPass);
+		Finish (startTime, count, attackPass);
 		
 	}
 
@@ -81,7 +83,7 @@ public class BruteForceAttack {
 		return attackPass;
 	}
 	
-	static List<Integer> CountUp(List<Integer> indexList,int length) {
+	static List<Integer> CountUp(List<Integer> indexList, int length) {
 		
 		int i = 0;
 		
@@ -104,7 +106,7 @@ public class BruteForceAttack {
 					
 				}
 				
-				indexList.set(i,0);
+				indexList.set(i, 0);
 				i++;
 				
 			} else {
@@ -114,7 +116,7 @@ public class BruteForceAttack {
 		return indexList;
 	}
 	
-	static void Finish(Long startTime,int count,String attackPass){
+	static void Finish(Long startTime, int count, String attackPass){
 		
 		Long endTime = System.currentTimeMillis();
 		Long millTime = (long)((endTime - startTime));
